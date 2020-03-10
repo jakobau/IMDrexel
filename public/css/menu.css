@@ -6,8 +6,6 @@
 #191a1d
 */
 
-
-
 h2 {
   padding: 20px;
 }
@@ -77,6 +75,10 @@ h2 {
 .box2 {
   width: 400px;
   margin-right:0 !important;
+}
+
+.footer {
+  margin-top: 200px !important;
 }
 
 @media (max-width: 991px) {
