@@ -75,6 +75,7 @@ function responseReceivedHandler() {
   content4.innerHTML += obj.OpponentWins + " | " + obj.OpponentDraws + " | " + obj.OpponentLosses;
   div.append(content4);
 
-  gameInfo.innerHTML = div;
+  gameInfo.innerHTML = "";
+  gameInfo.append(div);
 
 }
