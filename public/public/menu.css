@@ -1,0 +1,15 @@
+.my-sidebar {
+  -ms-flex: 0 0 230px;
+  flex: 0 0 230px;
+  background-color: greenyellow;
+}
+/*
+.row {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#sidebar {
+  width: 200px !important;
+}
+*/
