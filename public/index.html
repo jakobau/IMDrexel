@@ -11,18 +11,19 @@
 
     <title>IMDrexel</title>
 
-    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="css/menu.css">
 
     <!-- Bootstrap core CSS
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-color.css" >
 
   </head>
   <body>
 
     <!-- menu -->
-    <nav class="navbar navbar-light bg-light justify-content-between border-bottom ">
+    <nav class="navbar navbar-light bg-primary justify-content-between border-bottom" style="background-color: #f2be54 !important;">
       <a class="navbar-brand" href="index.html">IMDrexel</a>
       <a class="navbar-brand" href="profile.html">@Username <img src="./icons/avatar.jpg" width="50" height="30" alt=""></a>
     </nav>
@@ -38,9 +39,9 @@
                   <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Dashboard</a>
                   <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">My Teams</a>
                   <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Join Team</a>
-                  <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Stats</a>
+                  <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="profile.html" role="tab" aria-controls="v-pills-settings" aria-selected="false">Stats</a>
                   <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">New to IMDrexel?</a>
-                  <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Rules and Regulations</a>
+                  <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-stats" role="tab" aria-controls="v-pills-stats" aria-selected="false">Rules and Regulations</a>
                   <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Upcoming Sports</a>
                   <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Contact Organizers</a>
                 </div>
@@ -66,7 +67,7 @@
 
           <main class="container-fluid">
             <div class="row">
-              <div class="col-8">
+              <div class="col-fluid">
                 <h2>My Game Schedule</h2>
                 <div class="upcomingGames">
                   <a class="dot" id="game1"></a>
@@ -79,7 +80,7 @@
                   <span class="line"></span>
                   <span class="dot" id="game5"></span>
                 </div>
-                <div id="gameInfo" style="margin-top:50px; padding:20px; border:1px solid;">
+                <div id="gameInfo" class="box1" style="margin-top:50px; padding:20px; border:1px solid;">
                   <h3>Basketball 5v5 Mens League</h3>
                   <h4>5:00PM Tuesday, May 4</h4>
                   <h4>@Court1</h4>
@@ -88,9 +89,9 @@
                 </div>
               </div>
 
-              <div class="col-4">
+              <div class="col-fluid">
                 <h2>Upcoming Events</h2>
-                <div style="border:1px solid; padding:20px;">
+                <div class="box2" style="border:1px solid; padding:20px;">
                   <h5>Drexel Basketball Mens @ 7PM Sun 2/20</h5><hr>
                   <h5>Drexel Basketball Womens @ 2PM Sat 3/13</h5><hr>
                   <h5>Drexel Basketball Womens @ 2PM Sat 3/13</h5><hr>
@@ -102,9 +103,9 @@
             </div>
 
             <div class="row">
-              <div class="col-8">
+              <div class="col-fluid">
                 <h2>Player Stats</h2>
-                <div style="border:1px solid; padding:20px;">
+                <div class="box1" style="border:1px solid; padding:20px;">
                   <h5>Drexel Basketball Mens @ 7PM Sun 2/20</h5><hr>
                   <h5>Drexel Basketball Womens @ 2PM Sat 3/13</h5><hr>
                   <h5>Drexel Basketball Mens @ 7PM</h5><hr>
@@ -113,9 +114,9 @@
                 </div>
               </div>
 
-              <div class="col-4">
+              <div class="col-fluid">
                 <h2>Announcments</h2>
-                <div style="border:1px solid; padding:20px;">
+                <div class="box2" style="border:1px solid; padding:20px;">
                   <h5>Make sure to sign up for the upcoming squash, gaming leage, and come to the...</h5><hr>
                   <h5>Drexel Basketball Womens @ 2PM Sat 3/13</h5><hr>
                   <h5>Drexel Basketball Mens @ 7PM</h5><hr>
