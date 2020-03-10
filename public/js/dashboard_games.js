@@ -53,4 +53,28 @@ game5.addEventListener("click", function() {
 function responseReceivedHandler() {
   var obj = this.response;
 
+  var div = document.createElement("div");
+
+  var title = document.createElement("h3");
+  title.innerHTML = obj.sport + " " + obj.league;
+  div.append(title);
+
+  var content1 = document.createElement("h4");
+  content1.innerHTML += obj.Time + " " + obj.Day + " " + obj.Date;
+  div.append(content1);
+
+  var content2 = document.createElement("h4");
+  content2.innerHTML += obj.Location;
+  div.append(content2);
+
+  var content3 = document.createElement("h4");
+  content3.innerHTML += "VS " + obj.Opponent;
+  div.append(content3);
+
+  var content4 = document.createElement("h5");
+  content4.innerHTML += obj.OpponentWins + " | " + obj.OpponentDraws + " | " + obj.OpponentLosses;
+  div.append(content4);
+
+  gameInfo.innerHTML = div;
+
 }
