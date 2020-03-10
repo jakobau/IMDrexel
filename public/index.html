@@ -13,8 +13,9 @@
 
     <link rel="stylesheet" href="menu.css">
 
-    <!-- Bootstrap core CSS -->
+    <!-- Bootstrap core CSS
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
   </head>
@@ -23,7 +24,7 @@
     <!-- menu -->
     <nav class="navbar navbar-light bg-light justify-content-between border-bottom ">
       <a class="navbar-brand" href="index.html">IMDrexel</a>
-      <a class="navbar-brand" href="profile.html">@Username <img src="/icons/avatar.jpg" width="30" height="30" alt=""></a>
+      <a class="navbar-brand" href="profile.html">@Username <img src="./icons/avatar.jpg" width="50" height="30" alt=""></a>
     </nav>
 
     <!-- main content -->
@@ -56,66 +57,74 @@
               </div>
             </div>
         </div>
+
         <!-- under nav bar -->
         <div class="col pl-0">
           <nav class="navbar navbar-light bg-light justify-content-between sticky-top">
-            <a class="navbar-brand" href="index.html">Dashboard</a>
+            <a class="navbar-brand" href="#">Dashboard</a>
           </nav>
+
           <main class="container-fluid">
             <div class="row">
               <div class="col-8">
-                <h2>Game Schedule</h2>
+                <h2>My Game Schedule</h2>
                 <div class="upcomingGames">
-                  <a class="dot" href="#" style="cursor: pointer;"></a>
+                  <a class="dot" id="game1"></a>
                   <span class="line"></span>
-                  <span class="dot"></span>
+                  <span class="dot" id="game2"></span>
                   <span class="line"></span>
-                  <span class="dotMain"></span>
+                  <span class="dotMain" id="game3"></span>
                   <span class="line2"></span>
-                  <span class="dot"></span>
+                  <span class="dot" id="game4"></span>
                   <span class="line"></span>
-                  <span class="dot"></span>
+                  <span class="dot" id="game5"></span>
                 </div>
-                <div style="margin-top:50px; padding:20px; border:1px solid;">
+                <div id="gameInfo" style="margin-top:50px; padding:20px; border:1px solid;">
                   <h3>Basketball 5v5 Mens League</h3>
                   <h4>5:00PM Tuesday, May 4</h4>
                   <h4>@Court1</h4>
                   <h4>VS KILLERS</h4>
-                  <h4>record 7|0|0</h4>
+                  <h5>record 7|0|0</h5>
                 </div>
               </div>
+
               <div class="col-4">
-                <h2>Events</h2>
+                <h2>Upcoming Events</h2>
                 <div style="border:1px solid; padding:20px;">
-                  <h5>Drexel Basketball Mens @ 7PM Sun 2/20</h5>
-                  <hr>
-                  <h5>Drexel Basketball Womens @ 2PM Sat 3/13</h5>
-                  <hr>
-                  <h5>Drexel Basketball Mens @ 7PM</h5>
-                  <hr>
+                  <h5>Drexel Basketball Mens @ 7PM Sun 2/20</h5><hr>
+                  <h5>Drexel Basketball Womens @ 2PM Sat 3/13</h5><hr>
+                  <h5>Drexel Basketball Womens @ 2PM Sat 3/13</h5><hr>
+                  <h5>Squash Tourney @3/13 - 3/30</h5><hr>
+                  <h5>Drexel Volleyball Womens @ 8PM 3/15</h5><hr>
+                  <p style="text-align:center; margin:0;">more...</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-8">
+                <h2>Player Stats</h2>
+                <div style="border:1px solid; padding:20px;">
+                  <h5>Drexel Basketball Mens @ 7PM Sun 2/20</h5><hr>
+                  <h5>Drexel Basketball Womens @ 2PM Sat 3/13</h5><hr>
+                  <h5>Drexel Basketball Mens @ 7PM</h5><hr>
+                  <h5>Drexel Basketball Mens @ 7PM</h5><hr>
+                  <p >more...</p>
+                </div>
+              </div>
+
+              <div class="col-4">
+                <h2>Announcments</h2>
+                <div style="border:1px solid; padding:20px;">
+                  <h5>Make sure to sign up for the upcoming squash, gaming leage, and come to the...</h5><hr>
+                  <h5>Drexel Basketball Womens @ 2PM Sat 3/13</h5><hr>
+                  <h5>Drexel Basketball Mens @ 7PM</h5><hr>
                   <h5>Drexel Basketball Mens @ 7PM</h5>
                 </div>
               </div>
             </div>
-            <h6>Landing Page</h6>
-            <h6>Landing Page</h6>
-            <h6>Landing Page</h6>
-            <h6>Landing Page</h6>
-            <h6>Landing Page</h6>
-            <h6>Landing Page</h6>
-            <h6>Landing Page</h6>
-            <h6>Landing Page</h6>
-            <h6>Landing Page</h6>
-            <h6>Landing Page</h6>
-            <h6>Landing Page</h6>
-            <h6>Landing Page</h6>
-            <h6>Landing Page</h6>
-            <h6>Landing Page</h6>
-            <h6>Landing Page</h6>
-            <h6>Landing Page</h6>
-            <h6>Landing Page</h6>
-            <h6>Landing Page</h6>
           </main>
+          <br><br> <!-- delete brs later -->
         </div>
       </div>
     </div>
@@ -127,6 +136,28 @@
 
   </body>
   <script type='text/javascript'>
-    
+    var gameInfo = document.getElementById('gameInfo');
+    var game1 = document.getElementById('game1');
+    var game2 = document.getElementById('game2');
+    var game3 = document.getElementById('game3');
+    var game4 = document.getElementById('game4');
+    var game5 = document.getElementById('game5');
+
+    game1.addEventListener("click", function() {
+      gameInfo.innerHTML = "<h2>GAAAAME 1</h2>";
+    });
+    game2.addEventListener("click", function() {
+      gameInfo.innerHTML = "<h2>GAAAAME 2</h2>";
+    });
+    game3.addEventListener("click", function() {
+      gameInfo.innerHTML = "<h2>GAAAAME 3</h2>";
+    });
+    game4.addEventListener("click", function() {
+      gameInfo.innerHTML = "<h2>GAAAAME 4</h2>";
+    });
+    game5.addEventListener("click", function() {
+      gameInfo.innerHTML = "<h2>GAAAAME 5</h2>";
+    });
+
   </script>
 </html>
