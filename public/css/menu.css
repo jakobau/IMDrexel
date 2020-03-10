@@ -1,0 +1,108 @@
+/*colors:
+#f2be54
+#cdd4ca
+#87aeb4
+#153e5c
+#191a1d
+*/
+
+
+
+h2 {
+  padding: 20px;
+}
+
+.col-fixed {
+  position:relative;
+  min-height:1px;
+  padding-right:15px;
+  padding-left:15px;
+  float:left;
+  width:100%;
+}
+
+.col-fluid {
+  position:relative;
+  min-height:1px;
+  padding-right:15px;
+  padding-left:15px;
+  float:left;
+  width:100%;
+}
+
+.dot {
+  height: 75px;
+  width: 75px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.dotMain {
+  height: 150px;
+  width: 150px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  cursor: pointer;
+}
+
+.line {
+  height: 4px;
+  width: 40px;
+  background-color: #555;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+.line2 {
+  height: 4px;
+  width: 40px;
+  background-color: #555;
+  display: inline-block;
+  margin-bottom: 30px;
+  margin-left: 155px;
+}
+
+.upcomingGames {
+  padding: 1px;
+}
+
+.box1 {
+  width: 600px;
+}
+
+.box2 {
+  width: 400px;
+  margin-right:0 !important;
+}
+
+@media (max-width: 991px) {
+    .col-fixed { width:70px; }
+    .col-fluid { width:100%; }
+    .navbarOne { display:none !important; }
+    .navbarTwo { display:block !important; }
+    h2 { font-size: 20px !important;}
+    .line { display:none; }
+    .line2 { display:none; }
+    .dot { display:none; }
+    .dotMain { display:none; }
+    .box1 { width:100%; }
+    .box2 { width:100%; }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .col-fixed { width:240px; }
+    .col-fluid { width:100%; }
+    .line { display:none; }
+    .line2 { display:none; }
+    .dot { display:none; }
+    .dotMain { display:none; }
+}
+
+@media (min-width: 1200px) {
+    .col-fixed { width:240px; }
+    .col-fluid { width:50%; }
+}
