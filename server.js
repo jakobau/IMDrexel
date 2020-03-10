@@ -22,7 +22,7 @@ server.listen(8080, function() { console.log("Server open on 8080...") })
 //
 //connection.end();
 
-app.get("/dashboard", (req, res) => {
+server.get("/dashboard", (req, res) => {
   var obj = {};
   obj["sport"] = "Basketball";
   obj["league"] = "5v5 Mens League";
@@ -36,4 +36,4 @@ app.get("/dashboard", (req, res) => {
   obj["OpponentLosses"] = "0";
   
   res.send(obj);
-}
+})
