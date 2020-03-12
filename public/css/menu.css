@@ -36,6 +36,8 @@ h2 {
   display: inline-block;
   margin-top: 30px;
   cursor: pointer;
+
+
 }
 
 .dotMain {
@@ -46,6 +48,9 @@ h2 {
   display: inline-block;
   position: absolute;
   cursor: pointer;
+
+  padding-top: 35px;
+  text-align: center;
 }
 
 .line {
@@ -64,12 +69,11 @@ h2 {
   margin-left: 155px;
 }
 
-.upcomingGames {
-  padding: 1px;
-}
-
 .box1 {
-  width: 600px;
+  width: 700px;
+  margin-top:50px;
+  padding:20px;
+  border:1px solid;
 }
 
 .box2 {
@@ -87,10 +91,8 @@ h2 {
     .navbarOne { display:none !important; }
     .navbarTwo { display:block !important; }
     h2 { font-size: 20px !important;}
-    .line { display:none; }
-    .line2 { display:none; }
-    .dot { display:none; }
-    .dotMain { display:none; }
+    .upcomingGames { display:none !important; }
+    #upcomingGames { display:none !important; }
     .box1 { width:100%; }
     .box2 { width:100%; }
 }
@@ -98,13 +100,18 @@ h2 {
 @media (min-width: 992px) and (max-width: 1199px) {
     .col-fixed { width:240px; }
     .col-fluid { width:100%; }
-    .line { display:none; }
-    .line2 { display:none; }
-    .dot { display:none; }
-    .dotMain { display:none; }
+    .upcomingGames { display:none !important; }
+    #upcomingGames { display:none !important; }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1200px) and (max-width: 1649px) {
+    .col-fixed { width:240px; }
+    .col-fluid { width:50%; }
+    .upcomingGames { display:none !important; }
+    #upcomingGames { display:none !important; }
+}
+
+@media (min-width: 1650px) {
     .col-fixed { width:240px; }
     .col-fluid { width:50%; }
 }
