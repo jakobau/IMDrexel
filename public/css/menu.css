@@ -92,10 +92,10 @@ h2 {
     .col-fluid { width:100%; }
     .navbarOne { display:none !important; }
     .navbarTwo { display:block !important; }
-    h2 { font-size: 20px !important;}
+    /*h2 { font-size: 20px !important;}*/
     .upcomingGames { display:none !important; }
     #upcomingGames { display:none !important; }
-    .box1 { width:100%; }
+    .box1 { width:100%; margin-top:0 !important; }
     .box2 { width:100%; }
 }
 
@@ -104,13 +104,15 @@ h2 {
     .col-fluid { width:100%; }
     .upcomingGames { display:none !important; }
     #upcomingGames { display:none !important; }
+    .box1 { margin-top:0 !important; }
+    .box2 { width: 700px !important; }
 }
 
 @media (min-width: 1200px) and (max-width: 1649px) {
     .col-fixed { width:240px; }
     .col-fluid { width:50%; }
-    .upcomingGames { display:none !important; }
-    #upcomingGames { display:none !important; }
+    /*.upcomingGames { display:none !important; }
+    #upcomingGames { display:none !important; }*/
 }
 
 @media (min-width: 1650px) {
