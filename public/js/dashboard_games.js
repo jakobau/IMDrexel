@@ -11,7 +11,7 @@ game1.addEventListener("click", function() {
   xhr.responseType = "json";
   xhr.open('GET', '/dashboardgames?gamenum=1', true);
   xhr.send();
-  gameInfo.innerHTML += "<h2>GAAAAME 1</h2>";
+  //gameInfo.innerHTML += "<h2>GAAAAME 1</h2>";
 });
 
 game2.addEventListener("click", function() {
@@ -20,7 +20,7 @@ game2.addEventListener("click", function() {
   xhr.responseType = "json";
   xhr.open('GET', '/dashboardgames?gamenum=2', true);
   xhr.send();
-  gameInfo.innerHTML += "<h2>GAAAAME 2</h2>";
+  //gameInfo.innerHTML += "<h2>GAAAAME 2</h2>";
 });
 
 game3.addEventListener("click", function() {
@@ -29,7 +29,7 @@ game3.addEventListener("click", function() {
   xhr.responseType = "json";
   xhr.open('GET', '/dashboardgames?gamenum=3', true);
   xhr.send();
-  gameInfo.innerHTML += "<h2>GAAAAME 3</h2>";
+  //gameInfo.innerHTML += "<h2>GAAAAME 3</h2>";
 });
 
 game4.addEventListener("click", function() {
@@ -38,7 +38,7 @@ game4.addEventListener("click", function() {
   xhr.responseType = "json";
   xhr.open('GET', '/dashboardgames?gamenum=4', true);
   xhr.send();
-  gameInfo.innerHTML += "<h2>GAAAAME 4</h2>";
+  //gameInfo.innerHTML += "<h2>GAAAAME 4</h2>";
 });
 
 game5.addEventListener("click", function() {
@@ -47,7 +47,7 @@ game5.addEventListener("click", function() {
   xhr.responseType = "json";
   xhr.open('GET', '/dashboardgames?gamenum=5', true);
   xhr.send();
-  gameInfo.innerHTML += "<h2>GAAAAME 5</h2>";
+  //gameInfo.innerHTML += "<h2>GAAAAME 5</h2>";
 });
 
 function responseReceivedHandler() {
