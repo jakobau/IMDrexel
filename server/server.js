@@ -2,7 +2,9 @@ const express = require("express");
 const server = express();
 const mysql = require("mysql");
 
-server.listen(8080, function() { console.log("Server open on 8080...") })
+const dashboard = require("./dashboard")(server);
+
+server.listen(8080, function() { console.log("Server open on 8080...") });
 
 //const connection = mysql.createConnection({
 //  host     : process.env.RDS_HOSTNAME,
@@ -21,21 +23,4 @@ server.listen(8080, function() { console.log("Server open on 8080...") })
 //});
 //
 //connection.end();
-
-server.use(express.static("public"));
-
-server.get("/dashboard", (req, res) => {
-  var obj = {};
-  obj["sport"] = "Basketball";
-  obj["league"] = "5v5 Mens League";
-  obj["Time"] = "17:00";
-  obj["Day"] = "Tuesday";
-  obj["Date"] = "4 May 2020";
-  obj["Location"] = "@Court1";
-  obj["Opponent"] = "KILLERS";
-  obj["OpponentWins"] = "7";
-  obj["OpponentDraws"] = "0";
-  obj["OpponentLosses"] = "0";
-  
-  res.send(obj);
-})
+server.use(express.static("../public"));

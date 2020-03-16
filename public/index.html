@@ -13,17 +13,14 @@
 
     <link rel="stylesheet" href="css/menu.css">
 
-    <!-- Bootstrap core CSS
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
--->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-color.css" >
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
   </head>
   <body>
 
     <!-- menu -->
-    <nav class="navbar navbar-light bg-primary justify-content-between border-bottom" style="background-color: #f2be54 !important;">
+    <nav class="navbar navbar-light bg-primary justify-content-between border-bottom">
       <a class="navbar-brand" href="index.html">IMDrexel</a>
       <a class="navbar-brand" href="profile.html">@Username <img src="./icons/avatar.jpg" width="50" height="30" alt=""></a>
     </nav>
@@ -33,132 +30,139 @@
       <div class="row">
         <!-- sidebar -->
         <div class="col-fixed pr-0">
-            <div class="navbar navbar-light bg-light border-right sticky-top" >
+            <div class="navbar navbar-light bg-white border-right sticky-top" >
               <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                 <div class="navbarOne">
-                  <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Dashboard</a>
-                  <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">My Teams</a>
-                  <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Join Team</a>
-                  <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="profile.html" role="tab" aria-controls="v-pills-settings" aria-selected="false">Stats</a>
-                  <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">New to IMDrexel?</a>
-                  <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-stats" role="tab" aria-controls="v-pills-stats" aria-selected="false">Rules and Regulations</a>
-                  <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Upcoming Sports</a>
-                  <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Contact Organizers</a>
+                  <a class="nav-link text-secondary active" id="v-pills-home-tab" data-toggle="pill" href="#" role="tab" aria-controls="v-pills-home" aria-selected="true">Dashboard</a>
+                  <a class="nav-link text-secondary" id="v-pills-settings-tab" data-toggle="pill" href="profile.html" role="tab" aria-controls="v-pills-settings" aria-selected="false">Profile</a>
+                  <a class="nav-link text-secondary" id="v-pills-profile-tab" data-toggle="pill" href="myteams.html" role="tab" aria-controls="v-pills-profile" aria-selected="false">My Teams</a>
+                  <a class="nav-link text-secondary" id="v-pills-messages-tab" data-toggle="pill" href="jointeam.html" role="tab" aria-controls="v-pills-messages" aria-selected="false">Join Team</a>
+                  <a class="nav-link text-secondary" id="v-pills-settings-tab" data-toggle="pill" href="new.html" role="tab" aria-controls="v-pills-settings" aria-selected="false">New to IMDrexel?</a>
+                  <a class="nav-link text-secondary" id="v-pills-settings-tab" data-toggle="pill" href="rules.html" role="tab" aria-controls="v-pills-stats" aria-selected="false">Rules and Regulations</a>
+                  <a class="nav-link text-secondary" id="v-pills-settings-tab" data-toggle="pill" href="leagues.html" role="tab" aria-controls="v-pills-settings" aria-selected="false">Upcoming Sports</a>
+                  <a class="nav-link text-secondary" id="v-pills-settings-tab" data-toggle="pill" href="contact.html" role="tab" aria-controls="v-pills-settings" aria-selected="false">Contact Organizers</a>
                 </div>
                 <div class="navbarTwo" style="display:none;">
-                  <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">D</a>
-                  <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">T</a>
-                  <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">J</a>
-                  <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">S</a>
-                  <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">N</a>
-                  <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">R</a>
-                  <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">U</a>
-                  <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">C</a>
+                  <a class="nav-link text-secondary active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">D</a>
+                  <a class="nav-link text-secondary" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">T</a>
+                  <a class="nav-link text-secondary" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">J</a>
+                  <a class="nav-link text-secondary" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">S</a>
+                  <a class="nav-link text-secondary" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">N</a>
+                  <a class="nav-link text-secondary" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">R</a>
+                  <a class="nav-link text-secondary" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">U</a>
+                  <a class="nav-link text-secondary" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">C</a>
                 </div>
               </div>
             </div>
         </div>
 
-        <!-- under nav bar -->
+        <!-- under nav bar, sticky sub nav-->
         <div class="col pl-0">
-          <nav class="navbar navbar-light bg-light justify-content-between sticky-top">
-            <a class="navbar-brand" href="#">Dashboard</a>
+          <!-- under nav bar, sticky sub nav-->
+          <nav aria-label="breadcrumb" class="sticky-top">
+            <ol class="breadcrumb" style="border-radius: 0;">
+              <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+            </ol>
           </nav>
-
-          <main class="container-fluid">
-            <div class="row">
-              <div class="col-fluid">
-                <h2>My Game Schedule</h2>
-                <div class="upcomingGames">
+          <!-- start main content -->
+          <main class="d-flex justify-content-around flex-wrap">
+            <div>
+              <h2>My Game Schedule</h2>
+              <div class="d-flex justify-content-around" id="upcomingGames">
+                <p>past games</p>
+                <p>upcoming games</p>
+              </div>
+              <div class="d-flex justify-content-center">
+                <div class="upcomingGames" id="upcomingGames">
                   <a class="dot" id="game1"></a>
                   <span class="line"></span>
                   <span class="dot" id="game2"></span>
                   <span class="line"></span>
-                  <span class="dotMain" id="game3"></span>
+                  <span class="dotMain" id="game3">
+                    <strong>NEXT GAME</strong>
+                    <h1>15</h1>
+                  </span>
                   <span class="line2"></span>
                   <span class="dot" id="game4"></span>
                   <span class="line"></span>
                   <span class="dot" id="game5"></span>
                 </div>
-                <div id="gameInfo" class="box1" style="margin-top:50px; padding:20px; border:1px solid;">
-                  <h3>Basketball 5v5 Mens League</h3>
-                  <h4>5:00PM Tuesday, May 4</h4>
-                  <h4>@Court1</h4>
-                  <h4>VS KILLERS</h4>
-                  <h5>record 7|0|0</h5>
-                </div>
               </div>
-
-              <div class="col-fluid">
-                <h2>Upcoming Events</h2>
-                <div class="box2" style="border:1px solid; padding:20px;">
-                  <h5>Drexel Basketball Mens @ 7PM Sun 2/20</h5><hr>
-                  <h5>Drexel Basketball Womens @ 2PM Sat 3/13</h5><hr>
-                  <h5>Drexel Basketball Womens @ 2PM Sat 3/13</h5><hr>
-                  <h5>Squash Tourney @3/13 - 3/30</h5><hr>
-                  <h5>Drexel Volleyball Womens @ 8PM 3/15</h5><hr>
-                  <p style="text-align:center; margin:0;">more...</p>
+              <div class="d-flex justify-content-center">
+                <div id="gameInfo" class="box1">
+                  <h3><a href="#">Basketball 5v5 Mens League</a></h3>
+                  <h4>5:00PM Tuesday, May 4</h4>
+                  <h4><a href="#">@Court1</a></h4>
+                  <h4>VS <a href="#">KILLERS</a></h4>
+                  <h5>record 7|0|0</h5>
+                  <a href="/gameinfo.html?myVar=09485">more info</a>
                 </div>
               </div>
             </div>
-
-            <div class="row">
-              <div class="col-fluid">
-                <h2>Player Stats</h2>
-                <div class="box1" style="border:1px solid; padding:20px;">
-                  <h5>Drexel Basketball Mens @ 7PM Sun 2/20</h5><hr>
-                  <h5>Drexel Basketball Womens @ 2PM Sat 3/13</h5><hr>
-                  <h5>Drexel Basketball Mens @ 7PM</h5><hr>
-                  <h5>Drexel Basketball Mens @ 7PM</h5><hr>
-                  <p >more...</p>
-                </div>
+            <div>
+              <h2>Upcoming Events</h2>
+              <div id="events" class="box2">
+                <h5><a href="#">Drexel Basketball Mens @ 7PM Sun 2/20</a></h5><hr>
+                <h5><a href="#">Drexel Basketball Womens @ 2PM Sat 3/13</a></h5><hr>
+                <h5><a href="#">Drexel Basketball Womens @ 2PM Sat 3/13</a></h5><hr>
+                <h5><a href="#">Squash Tourney @3/13 - 3/30</a></h5><hr>
+                <h5><a href="#">Drexel Volleyball Womens @ 8PM 3/15</a></h5><hr>
+                <p style="text-align:center; margin:0;"><a href="#">more...</a></p>
               </div>
-
-              <div class="col-fluid">
-                <h2>Announcments</h2>
-                <div class="box2" style="border:1px solid; padding:20px;">
-                  <h5>Make sure to sign up for the upcoming squash, gaming leage, and come to the...</h5><hr>
-                  <h5>Drexel Basketball Womens @ 2PM Sat 3/13</h5><hr>
-                  <h5>Drexel Basketball Mens @ 7PM</h5><hr>
-                  <h5>Drexel Basketball Mens @ 7PM</h5>
-                </div>
+            </div>
+            <div>
+              <h2>My Stats</h2>
+              <div id="playerStats" class="box1">
+                <table>
+                  <th><h4>Current Teams</h4><hr></th>
+                  <tr>
+                    <th><h5><a href="#">Basketball 5v5 Mens League: </a></h5></th>
+                    <th><h5>Record 8|2|1</h5></th>
+                  </tr>
+                  <tr>
+                    <td><h5><a href="#">Soccer 3v3 CoRec League: </a></h5></td>
+                    <td><h5>Record 2|4|0</h5></td>
+                  </tr>
+                  <th><h4>Past Teams</h4><hr></th>
+                  <tr>
+                    <th><h5><a href="#">Winter 2019 Volleyball 6v6 CoRec League: </a></h5></th>
+                    <th><h5>Record 8|2|1</h5></th>
+                  </tr>
+                  <tr>
+                    <td><h5><a href="#">Spring 2019 Beach Volleyball 4v4 Mens League: </a></h5></td>
+                    <td><h5>Record 10|0|0</h5></td>
+                  </tr>
+                  <tr>
+                    <td><h5><a href="#">Fall 2019 Volleyball 6v6 CoRec League: </a></h5></td>
+                    <td><h5>Record 8|2|1</h5></td>
+                  </tr>
+                  <tr><td><p><a href="#">more...</a></p></td><tr>
+                </table>
+              </div>
+            </div>
+            <div style="padding:20px;">
+              <h2>Announcments</h2>
+              <div id="announcments" class="box2">
+                <a href="#"><h5>Welcome!</h5><h6>Welcome to IMDrexel, the new intramural website for college. Make sure to...</h6></a><hr>
+                <a href="#"><h5>Sign up</h5><h6>Make sure to sign up for the upcoming squash, gaming leage, and come to the...</h6></a><hr>
+                <a href="#"><h5>New Sports</h5><h6>If you are interested in more sports make sure to check out the league page...</h6></a><hr>
+                <a href="#"><h5>Contact Us</h5><h6>If you have questions, concerns, or a review of the website contact us through...</h6></a><hr>
+                <a href="#"><p style="text-align:center; margin:0;">more...</p></a>
               </div>
             </div>
           </main>
-          <br><br> <!-- delete brs later -->
         </div>
       </div>
     </div>
 
     <!--footer-->
-    <footer class="footer-copyright text-center py-3 border-top">© 2020 Copyright:
-      <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+    <footer class="footer text-center py-3 border-top">Summit Squad © 2020 Copyright:
+      <a href="https://github.com/jakobau/IMDrexel"> Github Link</a>
     </footer>
 
   </body>
-  <script type='text/javascript'>
-    var gameInfo = document.getElementById('gameInfo');
-    var game1 = document.getElementById('game1');
-    var game2 = document.getElementById('game2');
-    var game3 = document.getElementById('game3');
-    var game4 = document.getElementById('game4');
-    var game5 = document.getElementById('game5');
-
-    game1.addEventListener("click", function() {
-      gameInfo.innerHTML = "<h2>GAAAAME 1</h2>";
-    });
-    game2.addEventListener("click", function() {
-      gameInfo.innerHTML = "<h2>GAAAAME 2</h2>";
-    });
-    game3.addEventListener("click", function() {
-      gameInfo.innerHTML = "<h2>GAAAAME 3</h2>";
-    });
-    game4.addEventListener("click", function() {
-      gameInfo.innerHTML = "<h2>GAAAAME 4</h2>";
-    });
-    game5.addEventListener("click", function() {
-      gameInfo.innerHTML = "<h2>GAAAAME 5</h2>";
-    });
-
-  </script>
+  <script src="js/dashboard_games.js"></script>
+  <script src="js/dashboard_events.js"></script>
+  <script src="js/dashboard_playerStats.js"></script>
+  <script src="js/dashboard_announcments.js"></script>
 </html>
