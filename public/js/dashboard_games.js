@@ -61,8 +61,6 @@ game5.addEventListener("click", function() {
 });
 
 function change(xml) {
-  console.log("success");
-  //var obj = content;
   var obj = JSON.parse(xml.response);
 
   var div = document.createElement("div");
