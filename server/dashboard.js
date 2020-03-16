@@ -15,7 +15,7 @@ module.exports = function(server) {
     obj["OpponentWins"] = "7";
     obj["OpponentDraws"] = "0";
     obj["OpponentLosses"] = "0";
-  
+
     res.send(obj);
   });
 
@@ -30,10 +30,10 @@ module.exports = function(server) {
     var obj = {};
     res.send(obj);
   });
-  
+
   //dashboard_playerstats Endpoint
   server.get('/dashboardplayerstats', (req, res) => {
     var obj = {};
     res.send(obj);
   });
-}
+};

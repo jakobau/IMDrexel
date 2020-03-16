@@ -7,51 +7,63 @@ var game5 = document.getElementById('game5');
 
 game1.addEventListener("click", function() {
   var xhr = new XMLHttpRequest();
-  xhr.addEventListener("load", responseReceivedHandler);
-  xhr.responseType = "json";
+  xhr.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      change(this);
+    }
+  };
   xhr.open('GET', '/dashboardgames?gamenum=1', true);
   xhr.send();
-  //gameInfo.innerHTML += "<h2>GAAAAME 1</h2>";
 });
 
 game2.addEventListener("click", function() {
   var xhr = new XMLHttpRequest();
-  xhr.addEventListener("load", responseReceivedHandler);
-  xhr.responseType = "json";
+  xhr.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      change(this);
+    }
+  };
   xhr.open('GET', '/dashboardgames?gamenum=2', true);
   xhr.send();
-  //gameInfo.innerHTML += "<h2>GAAAAME 2</h2>";
 });
 
 game3.addEventListener("click", function() {
   var xhr = new XMLHttpRequest();
-  xhr.addEventListener("load", responseReceivedHandler);
-  xhr.responseType = "json";
+  xhr.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      change(this);
+    }
+  };
   xhr.open('GET', '/dashboardgames?gamenum=3', true);
   xhr.send();
-  //gameInfo.innerHTML += "<h2>GAAAAME 3</h2>";
 });
 
 game4.addEventListener("click", function() {
   var xhr = new XMLHttpRequest();
-  xhr.addEventListener("load", responseReceivedHandler);
-  xhr.responseType = "json";
+  xhr.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      change(this);
+    }
+  };
   xhr.open('GET', '/dashboardgames?gamenum=4', true);
   xhr.send();
-  //gameInfo.innerHTML += "<h2>GAAAAME 4</h2>";
 });
 
 game5.addEventListener("click", function() {
   var xhr = new XMLHttpRequest();
-  xhr.addEventListener("load", responseReceivedHandler);
-  xhr.responseType = "json";
+  xhr.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      change(this);
+    }
+  };
   xhr.open('GET', '/dashboardgames?gamenum=5', true);
   xhr.send();
-  //gameInfo.innerHTML += "<h2>GAAAAME 5</h2>";
 });
 
-function responseReceivedHandler() {
-  var obj = this.response;
+function change(xml) {
+  console.log("success");
+  //var obj = content;
+  var obj = JSON.parse(xml.response);
 
   var div = document.createElement("div");
 
@@ -77,5 +89,4 @@ function responseReceivedHandler() {
 
   gameInfo.innerHTML = "";
   gameInfo.append(div);
-
 }

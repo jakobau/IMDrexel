@@ -4,7 +4,7 @@ const mysql = require("mysql");
 
 const dashboard = require("./dashboard")(server);
 
-server.listen(8080, function() { console.log("Server open on 8080...") })
+server.listen(8080, function() { console.log("Server open on 8080...") });
 
 //const connection = mysql.createConnection({
 //  host     : process.env.RDS_HOSTNAME,
@@ -23,7 +23,4 @@ server.listen(8080, function() { console.log("Server open on 8080...") })
 //});
 //
 //connection.end();
-
 server.use(express.static("../public"));
-
-
