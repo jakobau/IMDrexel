@@ -16,8 +16,6 @@ module.exports = function(server) {
     obj["OpponentDraws"] = "0";
     obj["OpponentLosses"] = "0";
 
-    console.log("recieved and trying to send")
-
     res.send(obj);
   });
 
