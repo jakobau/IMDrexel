@@ -38,8 +38,8 @@ h2 {
   display: inline-block;
   margin-top: 30px;
   cursor: pointer;
-
-
+  text-align: center;
+  position: static;
 }
 
 .dotMain {
@@ -55,6 +55,10 @@ h2 {
   text-align: center;
 }
 
+.dot:hover, .dotMain:hover {
+  background-color: #f2be54;
+}
+
 .line {
   height: 4px;
   width: 40px;
@@ -62,6 +66,7 @@ h2 {
   display: inline-block;
   margin-bottom: 30px;
 }
+
 .line2 {
   height: 4px;
   width: 40px;
@@ -81,10 +86,16 @@ h2 {
 .box2 {
   width: 400px;
   margin-right:0 !important;
+  padding:20px;
+  border:1px solid;
 }
 
 .footer {
   margin-top: 200px !important;
+}
+
+th, td {
+  padding: 15px;
 }
 
 @media (max-width: 991px) {
@@ -104,7 +115,7 @@ h2 {
     .col-fluid { width:100%; }
     .upcomingGames { display:none !important; }
     #upcomingGames { display:none !important; }
-    .box1 { margin-top:0 !important; }
+    .box1 { width: 700px margin-top:0 !important; }
     .box2 { width: 700px !important; }
 }
 
