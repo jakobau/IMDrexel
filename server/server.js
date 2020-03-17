@@ -6,21 +6,35 @@ const dashboard = require("./dashboard")(server);
 
 server.listen(8080, function() { console.log("Server open on 8080...") });
 
-//const connection = mysql.createConnection({
-//  host     : process.env.RDS_HOSTNAME,
-//  user     : process.env.RDS_USERNAME,
-//  password : process.env.RDS_PASSWORD,
-//  port     : process.env.RDS_PORT
-//});
-//
-//connection.connect(function(err) {
-//  if (err) {
-//    console.error('Database connection failed: ' + err.stack);
-//    return;
-//  }
-//
-//  console.log('Connected to database.');
-//});
-//
-//connection.end();
+// Vincent Savarese AWS educate database credentials
+let con = mysql.createConnection({
+  // user and password fields are the master username and master password for the imdrexel instance
+  host     : 'imdrexel.crli4l5uoyui.us-east-1.rds.amazonaws.com',
+  user     : 'admin',
+  password : 'DrexelCCIAWSacc2311',
+});
+
+// establish connection between server and database
+con.connect(function(err) {
+  if (err) {
+    console.log("Failed to connect to database");
+    return;
+  }
+  console.log("Successfully connected to IMDrexel Database");
+});
+
+// choose the database to use and query
+con.query('USE imdrexldb;');
+
+// begin making queries and requesting information from the server
+con.query('SELECT * FROM roster;', function(err, rows, field){
+  if (err) {
+    console.log(err);
+    return;
+  }
+  console.log(rows[0].players);
+});
+
+con.end();
+
 server.use(express.static("../public"));
