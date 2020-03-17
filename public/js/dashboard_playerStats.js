@@ -1,5 +1,5 @@
 var playerStats = document.getElementById('playerStats');
-
+/*
 window.addEventListener("load", function() {
   var xhr = new XMLHttpRequest();
   xhr.addEventListener("load", responseReceivedHandler);
@@ -7,7 +7,7 @@ window.addEventListener("load", function() {
   xhr.open('GET', '/dashboardplayerstats', true);
   xhr.send();
   playerStats.innerHTML += "<h2>GAAAAME 5</h2>";
-});
+});*/
 
 function responseReceivedHandler() {
   return
