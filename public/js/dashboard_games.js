@@ -1,66 +1,141 @@
 var gameInfo = document.getElementById('gameInfo');
+
+//Circle Game UI
 var game1 = document.getElementById('game1');
 var game2 = document.getElementById('game2');
 var game3 = document.getElementById('game3');
 var game4 = document.getElementById('game4');
 var game5 = document.getElementById('game5');
 
-game1.addEventListener("click", function() {
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      change(this, 1);
-    }
-  };
-  xhr.open('GET', '/dashboardgames?gamenum=1', true);
-  xhr.send();
-});
+//mobile support
+var shortgame1 = document.getElementById('shortgame2');
+var shortgame2 = document.getElementById('shortgame3');
+var shortgame3 = document.getElementById('shortgame4');
 
-game2.addEventListener("click", function() {
+//default next game in gameInfo html
+window.addEventListener("load", function() {
   var xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      change(this, 2);
-    }
-  };
-  xhr.open('GET', '/dashboardgames?gamenum=2', true);
-  xhr.send();
-});
-
-game3.addEventListener("click", function() {
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      change(this, 3);
+      resetColor();
+      game3.style.backgroundColor = "#f2be54";
+      gamechange(this, 3);
     }
   };
   xhr.open('GET', '/dashboardgames?gamenum=3', true);
   xhr.send();
 });
 
+//changing gameInfo html
+//second to last game played
+game1.addEventListener("click", function() {
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      resetColor();
+      game1.style.backgroundColor = "#f2be54";
+      gamechange(this, 1);
+    }
+  };
+  xhr.open('GET', '/dashboardgames?gamenum=1', true);
+  xhr.send();
+});
+
+//last game played
+game2.addEventListener("click", function() {
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      resetColor();
+      game2.style.backgroundColor = "#f2be54";
+      gamechange(this, 2);
+    }
+  };
+  xhr.open('GET', '/dashboardgames?gamenum=2', true);
+  xhr.send();
+});
+
+//next game
+game3.addEventListener("click", function() {
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      resetColor();
+      game3.style.backgroundColor = "#f2be54";
+      gamechange(this, 3);
+    }
+  };
+  xhr.open('GET', '/dashboardgames?gamenum=3', true);
+  xhr.send();
+});
+
+//after the next game
 game4.addEventListener("click", function() {
   var xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      change(this, 4);
+      resetColor();
+      game4.style.backgroundColor = "#f2be54";
+      gamechange(this, 4);
     }
   };
   xhr.open('GET', '/dashboardgames?gamenum=4', true);
   xhr.send();
 });
 
+//two games from the next
 game5.addEventListener("click", function() {
   var xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      change(this, 5);
+      resetColor();
+      game5.style.backgroundColor = "#f2be54";
+      gamechange(this, 5);
     }
   };
   xhr.open('GET', '/dashboardgames?gamenum=5', true);
   xhr.send();
 });
 
-function change(xml, num) {
+//MOBILE SUPPORT
+//last game
+shortgame1.addEventListener("click", function() {
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      gamechange(this, 2);
+    }
+  };
+  xhr.open('GET', '/dashboardgames?gamenum=2', true);
+  xhr.send();
+});
+
+//next game
+shortgame2.addEventListener("click", function() {
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      gamechange(this, 3);
+    }
+  };
+  xhr.open('GET', '/dashboardgames?gamenum=3', true);
+  xhr.send();
+});
+
+//game after next game
+shortgame3.addEventListener("click", function() {
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      gamechange(this, 4);
+    }
+  };
+  xhr.open('GET', '/dashboardgames?gamenum=4', true);
+  xhr.send();
+});
+
+//change on event function
+function gamechange(xml, num) {
   //game number and xml response in JSON
   var gameNum = num;
   var obj = JSON.parse(xml.response);
@@ -69,11 +144,12 @@ function change(xml, num) {
   var div = document.createElement("div");
 
   var title = document.createElement("h3");
-  title.innerHTML = "<a href=\"#\">" + obj.sport + " " + obj.league + "</a>";
+  title.innerHTML = num.toString() + "<a href=\"#\">" + obj.sport + " " + obj.league + "</a>";
   div.append(title);
+  div.append(document.createElement("hr"));
 
   var content1 = document.createElement("h4");
-  content1.innerHTML += obj.Time + " " + obj.Day + " " + obj.Date;
+  content1.innerHTML += obj.Date + ", " + obj.Day + " " + obj.Time;
   div.append(content1);
 
   var content2 = document.createElement("h4");
@@ -81,7 +157,7 @@ function change(xml, num) {
   div.append(content2);
 
   var content3 = document.createElement("h4");
-  content3.innerHTML += "VS " + "<a href=\"#\">" + obj.Opponent + "</a>";
+  content3.innerHTML += "<a href=\"#\">MY TEAM</a>" + " VS " + "<a href=\"#\">" + obj.Opponent + "</a>";
   div.append(content3);
 
   var content4 = document.createElement("h5");
@@ -95,4 +171,13 @@ function change(xml, num) {
   //reset div and update
   gameInfo.innerHTML = "";
   gameInfo.append(div);
+}
+
+//reset background color
+function resetColor() {
+  game1.style.backgroundColor = "#cdd4ca";
+  game2.style.backgroundColor = "#cdd4ca";
+  game3.style.backgroundColor = "#cdd4ca";
+  game4.style.backgroundColor = "#cdd4ca";
+  game5.style.backgroundColor = "#cdd4ca";
 }
