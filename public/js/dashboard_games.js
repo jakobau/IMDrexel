@@ -153,7 +153,7 @@ function gamechange(xml, num) {
   div.append(content1);
 
   var content2 = document.createElement("h4");
-  content2.innerHTML += "<a href=\"#\">" + obj.Location + "</a>";
+  content2.innerHTML += "<a href=\"map.html\">" + obj.Location + "</a>";
   div.append(content2);
 
   var content3 = document.createElement("h4");
