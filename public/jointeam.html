@@ -68,6 +68,12 @@
             </ol>
           </nav>
 
+          <!--alert
+          <div class="alert alert-success alert-dismissible" style="width:85%;">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Success!</strong> Indicates a successful or positive action.
+          </div>-->
+
           <main class="d-flex justify-content-around">
             <div id="accordion">
               <div class="card">
@@ -82,36 +88,135 @@
                 <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                   <div class="card-body">
                     <div class="p-2" id="currentDiv">
-                    <div id="accordion2">
-                      <h3>Basketball Leagues</h3>
-                      <hr><h4>5v5</h4>
-                      <a data-toggle="collapse" href="#collapse1" role="button" aria-expanded="false" aria-controls="collapse1"><h5>Mens, Opens 3/17/2020 - 4/1/2020, Games Starts 4/1/2020 - 7/1/2020</h5></a>
-                      <div class="collapse" id="collapse1" data-parent="#accordion2">
-                        <div class="">
+                      <div id="accordion2">
+                        <h3>Soccer Leagues</h3>
+                        <hr><h4>Soccer 3v3</h4>
+                        <h5><a data-toggle="collapse" href="#collapse1" aria-expanded="false">Corec, Opens 3/17/2020 - 4/1/2020, Games Starts 4/1/2020 - 7/1/2020</a></h5>
+
+                        <div class="collapse" id="collapse1" data-parent="#accordion2">
+                          <h6><a data-toggle="collapse" href="#collapse1-1" aria-expanded="false">Opening the Door, 10 players</a></h6>
+                          <div class="collapse" id="collapse1-1" data-parent="#collapse1">
+                            <div class="float-left position-relative">
+                              <form action="jointeam" method=POST>
+                                <input name="teamid" value="1" style="display:none;">
+                                <input type="submit" class="btn btn-secondary mb-1 pull-left" value="Join Team">
+                              </form>
+                            </div>
+                            <button class="btn btn-info mb-1" href="viewteam.html?teamid=1">View Team</button>
+                          </div><!--done here-->
+
+                          <h6><a data-toggle="collapse" href="#collapse1-2" aria-expanded="false">Draco FC, 8 players</a></h6>
+                          <div class="collapse" id="collapse1-2" data-parent="#collapse1">
+                            <div class="float-left position-relative">
+                              <form action="jointeam" method=POST>
+                                <input name="teamid" value="2" style="display:none;">
+                                <input type="submit" class="btn btn-secondary mb-2" value="Join Team">
+                              </form>
+                            </div>
+                            <button class="btn btn-info mb-1" href="viewteam.html?teamid=2">View Team</button>
+                          </div>
+
+                          <a data-toggle="collapse" href="#collapse1-3" aria-expanded="false"><h6>The Messe, 9 players</h6></a>
+                          <div class="collapse" id="collapse1-3" data-parent="#collapse1">
+                            <div class="float-left position-relative">
+                              <form action="jointeam" method=POST>
+                                <input name="teamid" value="3" style="display:none;">
+                                <input type="submit" class="btn btn-secondary mb-2" value="Join Team">
+                              </form>
+                            </div>
+                            <button class="btn btn-info mb-1" href="viewteam.html?teamid=3">View Team</button>
+                          </div>
+
+                          <a data-toggle="collapse" href="#collapse1-4" aria-expanded="false"><h6>D1Drexel Futbol, 7 players</h6></a>
+                          <div class="collapse" id="collapse1-4" data-parent="#collapse1">
+                            <div class="float-left position-relative">
+                              <form action="jointeam" method=POST>
+                                <input name="teamid" value="4" style="display:none;">
+                                <input type="submit" class="btn btn-secondary mb-2" value="Join Team">
+                              </form>
+                            </div>
+                            <button class="btn btn-info mb-1" href="viewteam.html?teamid=4">View Team</button>
+                          </div>
+
+                          <a data-toggle="collapse" href="#collapse1-5" aria-expanded="false"><h6>Ian's Disciples, 5 players</h6></a>
+                          <div class="collapse" id="collapse1-5" data-parent="#collapse1">
+                            <div class="float-left position-relative">
+                              <form action="jointeam" method=POST>
+                                <input name="teamid" value="5" style="display:none;">
+                                <input type="submit" class="btn btn-secondary mb-2" value="Join Team">
+                              </form>
+                            </div>
+                            <button class="btn btn-info mb-1" href="viewteam.html?teamid=5">View Team</button>
+                          </div>
+
+                          <a data-toggle="collapse" href="#collapse1-6" aria-expanded="false"><h6>Dyslexia United, 6 players</h6></a>
+                          <div class="collapse" id="collapse1-6" data-parent="#collapse1">
+                            <div class="float-left position-relative">
+                              <form action="jointeam" method=POST>
+                                <input name="teamid" value="6" style="display:none;">
+                                <input type="submit" class="btn btn-secondary mb-2" value="Join Team">
+                              </form>
+                            </div>
+                            <button class="btn btn-info mb-1" href="viewteam.html?teamid=6">View Team</button>
+                          </div>
+
+                          <a data-toggle="collapse" href="#collapse1-7" aria-expanded="false"><h6>Groceries, 7 players</h6></a>
+                          <div class="collapse" id="collapse1-7" data-parent="#collapse1">
+                            <div class="float-left position-relative">
+                              <form action="jointeam" method=POST>
+                                <input name="teamid" value="7" style="display:none;">
+                                <input type="submit" class="btn btn-secondary mb-2" value="Join Team">
+                              </form>
+                            </div>
+                            <button class="btn btn-info mb-1" href="viewteam.html?teamid=6">View Team</button>
+                          </div>
+                        </div>
+
+                        <!-- Womens -->
+                        <a data-toggle="collapse" href="#collapse2" aria-expanded="false"><h5>Womens, Opens 3/17/2020 - 4/1/2020, Games Starts 4/1/2020 - 7/1/2020</h5></a>
+                        <div class="collapse" id="collapse2" data-parent="#accordion2">
                           <form action="jointeam" method=POST>
-                            <input name="teamid" value="1" style="display:none;">
+                            <input name="teamid" value="2" style="display:none;">
+                            <input type="submit" class="btn btn-secondary mb-2" value="Join Team">
+                          </form>
+                        </div>
+
+                        <a data-toggle="collapse" href="#collapse3" aria-expanded="false"><h5>Corec, Opens 3/17/2020 - 4/1/2020, Games Starts 4/1/2020 - 7/1/2020</h5></a>
+                        <div class="collapse" id="collapse3" data-parent="#accordion2">
+                          <form action="jointeam" method=POST>
+                            <input name="teamid" value="3" style="display:none;">
+                            <input type="submit" class="btn btn-secondary mb-2" value="Join Team">
+                          </form>
+                        </div>
+
+                        <hr><h4>3v3</h4>
+                        <a data-toggle="collapse" href="#collapse4" aria-expanded="false"><h5>Mens, Opens 3/17/2020 - 4/1/2020, Games Starts 4/1/2020 - 7/1/2020</h5></a>
+                        <div class="collapse" id="collapse4" data-parent="#accordion2">
+                          <form action="jointeam" method=POST>
+                            <input name="teamid" value="4" style="display:none;">
+                            <input type="submit" class="btn btn-secondary mb-2" value="Join Team">
+                          </form>
+                        </div>
+
+                        <a data-toggle="collapse" href="#collapse5" aria-expanded="false"><h5>Womens, Opens 3/17/2020 - 4/1/2020, Games Starts 4/1/2020 - 7/1/2020</h5></a>
+                        <div class="collapse" id="collapse5" data-parent="#accordion2">
+                          <form action="jointeam" method=POST>
+                            <input name="teamid" value="5" style="display:none;">
+                            <input type="submit" class="btn btn-secondary mb-2" value="Join Team">
+                          </form>
+                        </div>
+
+                        <a data-toggle="collapse" href="#collapse6" aria-expanded="false"><h5>Corec, Opens 3/17/2020 - 4/1/2020, Games Starts 4/1/2020 - 7/1/2020</h5></a>
+                        <div class="collapse" id="collapse6" data-parent="#accordion2">
+                          <form action="jointeam" method=POST>
+                            <input name="teamid" value="6" style="display:none;">
                             <input type="submit" class="btn btn-secondary mb-2" value="Join Team">
                           </form>
                         </div>
                       </div>
-                      <a data-toggle="collapse" href="#collapse2" role="button" aria-expanded="false" aria-controls="collapse2"><h5>Womens, Opens 3/17/2020 - 4/1/2020, Games Starts 4/1/2020 - 7/1/2020</h5></a>
-                      <div class="collapse" id="collapse2" data-parent="#accordion2">
-                        <div class="">
-                          <form action="jointeam" method=POST>
-                            <input name="teamid" value="1" style="display:none;">
-                            <input type="submit" class="btn btn-secondary mb-2" value="Join Team">
-                          </form>
-                        </div>
-                      </div>
-                      <a href="join.html?teamid=3"><h5>Corec, Opens 3/17/2020 - 4/1/2020, Games Starts 4/1/2020 - 7/1/2020</h5></a>
-                      <hr><h4>3v3</h4>
-                      <a href="join.html?teamid=4"><h5>Mens, Opens 3/17/2020 - 4/1/2020, Games Starts 4/1/2020 - 7/1/2020</h5></a>
-                      <a href="join.html?teamid=5"><h5>Womens, Opens 3/17/2020 - 4/1/2020, Games Starts 4/1/2020 - 7/1/2020</h5></a>
-                      <a href="join.html?teamid=6"><h5>Corec, Opens 3/17/2020 - 4/1/2020, Games Starts 4/1/2020 - 7/1/2020</h5></a>
-                    </div>
                     </div>
                     <div class="p-2">
-                      <h3>Soccer Leagues</h3>
+                      <h3>Basketball Leagues</h3>
                       <hr><h4>5v5</h4>
                       <a href="#"><h5>Mens, Opens 3/17/2020 - 4/1/2020, Games Starts 4/1/2020 - 7/1/2020</h5></a>
                       <a href="#"><h5>Womens, Opens 3/17/2020 - 4/1/2020, Games Starts 4/1/2020 - 7/1/2020</h5></a>
@@ -153,12 +258,12 @@
               <div class="card-header" id="headingTwo">
                 <h5 class="mb-0">
                   <span class ="position-absolute text-warning">Past</span>
-                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                     <h2 id="pastLeague1">Fall Term Leagues</h2>
                   </button>
                 </h5>
               </div>
-              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                 <div class="card-body">
                   <div class="p-2"  id="pastDiv2">
                     <h3>Basketball Leagues</h3>
