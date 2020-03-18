@@ -1,0 +1,12 @@
+#accordion {
+  width:85%;
+  max-width:900px;
+}
+
+.collapse {
+  padding-bottom: 5px !important;
+}
+
+.team {
+  padding: 5px;
+}
