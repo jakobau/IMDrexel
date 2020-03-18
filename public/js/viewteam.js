@@ -1,5 +1,8 @@
 var pagefrom = document.getElementById("pagefrom");
 var pagefrom2 = document.getElementById("pagefrom2");
+var teamname = document.getElementById("teamname");
+
+var table = document.getElementById("table");
 
 var urlParams = new URLSearchParams(window.location.search);
 
@@ -7,7 +10,7 @@ if(urlParams.has('teamid')) {
   var teamid = urlParams.get('teamid');
   var page = urlParams.get('page');
 
-  //get team using team id from SQL HERE
+  // !get team info using team id from SQL HERE
 
   if(page == "league") {
     pagefrom.innerHTML = "<a href=\"jointeam.html\" style=\"color:white;\">Leagues</a>";
@@ -19,8 +22,31 @@ if(urlParams.has('teamid')) {
     console.log("dashboard");
     pagefrom.style.display = "none";
     pagefrom2.innerHTML="<a href=\"#\" style=\"color:white;\">Team " + teamid.toString() + "</a>";
-
   }
 
+  teamname.innerHTML = teamid + " 5v5 Basketball"; // !add team name and league
+
+
+  // !foreach user in team, add to table variable under tbody
+
+  table.innerHTML = ""; //reset tbody
+
+  //new user
+  var tr = document.createElement("tr");
+
+  var th = document.createElement("th");
+  th.setAttribute("scope", "row");
+  th.innerHTML = "<a href=\"#\">" + "Vincent Saverese" + "</a>";
+  tr.append(th);
+
+  var td = document.createElement("td");
+  td.innerHTML = "Member";
+  tr.append(td);
+
+  var td2 = document.createElement("td");
+  td2.innerHTML = "10/11/2020";
+  tr.append(td2);
+
+  table.append(tr);
 
 }
