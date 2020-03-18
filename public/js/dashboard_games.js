@@ -157,7 +157,7 @@ function gamechange(xml, num) {
   div.append(content2);
 
   var content3 = document.createElement("h4");
-  content3.innerHTML += "<a href=\"#\">MY TEAM</a>" + " VS " + "<a href=\"#\">" + obj.Opponent + "</a>";
+  content3.innerHTML += "<a href=\"viewteam.html?teamid=1&page=dashboard\">MY TEAM</a>" + " VS " + "<a href=\"viewteam.html?teamid=1&page=dashboard\">" + obj.Opponent + "</a>";
   div.append(content3);
 
   var content4 = document.createElement("h5");
