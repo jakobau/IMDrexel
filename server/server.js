@@ -36,18 +36,21 @@ var result = [];
 //
 //  anything surrounded by quotes and pluses is to be replaced with user information once implemented
 //
-function schedule (callback) {
 
-  con.query('SELECT * FROM schedule_ WHERE schedule_.homeID = '+'1'+' OR schedule_.awayID = '+'1'+';', function(err, rows, field){
-    if (err) {
-      console.log(err);
-      return;
-    }
-    result.push(rows[0]);
-    callback(result);
+var schedule = 'SELECT * FROM schedule_ WHERE schedule_.homeID = '+'1'+' OR schedule_.awayID = '+'1'+';';
+
+con.query(schedule, function(err, rows, field){
+  if (err) {
+    console.log(err);
+    return;
+  }
+
+  server.get('/sqlrequest', (req, res) => {
+    res.send(rows)
   });
+  
+});
 
-}
 
 
 con.end();
