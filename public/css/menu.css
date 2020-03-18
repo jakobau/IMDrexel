@@ -90,8 +90,12 @@ h2 {
   border:1px solid;
 }
 
+.footer-copyright {
+  margin-top: 50px !important;
+}
+
 .footer {
-  margin-top: 200px !important;
+  margin-top: 50px !important;
 }
 
 th, td {

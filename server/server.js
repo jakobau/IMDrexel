@@ -8,6 +8,7 @@ server.use(bodyParser.json());
 
 const dashboard = require("./dashboard")(server);
 const auth = require("./authenticate")(server);
+const jointeam = require("./jointeam")(server);
 
 // Vincent Savarese AWS educate database credentials
 let con = mysql.createConnection({
