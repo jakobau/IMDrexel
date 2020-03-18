@@ -5,17 +5,17 @@ module.exports = function(server) {
     var email = req.body.inputEmail;
     var password = req.body.inputPassword;
     var goodCombo = true;
-
     //check if user and pass are valid here (using SQL)
     if (goodCombo) {
+      console.log(email);
       req.session.user = email;
-      res.redirect("/index.html");
+      res.redirect("/dashboard.html");
       console.log(req.session.user);
 
     }
     else {
       req.session.msg = "Invalid Login";
-      res.redirect("./login.html");
+      res.redirect("./");
       console.log(req.session.msg);
     }
   });
