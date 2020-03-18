@@ -1,11 +1,36 @@
 var gameinfo = document.getElementById('gameinfo');
 var bread = document.getElementById('bread');
+var record = document.getElementById('record');
+var pastGames = document.getElementById('pastGames');
+var totalPlayers = document.getElementById('totalPlayers');
 
-//v1 = parent.document.URL.substring(parent.document.URL.indexOf('?'), parent.document.URL.length);
-v1 = parent.document.URL.split("?")[1];
-v1 = v1.split("=");
+var table = document.getElementById("table");
 
-window.addEventListener("load", function() {
-  gameinfo.innerHTML = "<h5>Game id " + v1[1].toString() + "</h5>";
-  bread.innerHTML = v1[1].toString();
-});
+var urlParams = new URLSearchParams(window.location.search);
+
+if(urlParams.has('gameid')) {
+  var gameid = urlParams.get('gameid');
+  bread.innerHTML = gameid.toString();
+
+  table.innerHTML = ""; //reset tbody
+
+
+  // !foreach user in team, add to table variable under tbody
+
+  //new user
+  var tr = document.createElement("tr");
+
+  var th = document.createElement("th");
+  th.setAttribute("scope", "row");
+  th.innerHTML = "<a href=\"#\">" + "Vincent Saverese" + "</a>";
+  tr.append(th);
+
+  var td = document.createElement("td");
+  td.innerHTML = "Member";
+  tr.append(td);
+
+  table.append(tr);
+
+  //// TODO: record, totalPlayers, list users, update team name
+
+}

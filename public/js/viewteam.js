@@ -49,4 +49,7 @@ if(urlParams.has('teamid')) {
 
   table.append(tr);
 
+} else {
+  //error
 }
+//// TODO: list users, update team name

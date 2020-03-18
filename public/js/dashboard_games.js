@@ -165,7 +165,7 @@ function gamechange(xml, num) {
   div.append(content4);
 
   var content5 = document.createElement("p");
-  content5.innerHTML ="<a href=\"/gameinfo.html?myVar=09485\">more info</a>";
+  content5.innerHTML ="<a href=\"/gameinfo.html?gameid=09485\">more info</a>";
   div.append(content5);
 
   //reset div and update

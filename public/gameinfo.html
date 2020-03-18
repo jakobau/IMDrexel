@@ -12,6 +12,7 @@
     <title>IMDrexel</title>
 
     <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/gameinfo.css">
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -65,11 +66,73 @@
             </ol>
           </nav>
 
+          <main class="d-flex justify-content-around flex-wrap">
+            <div>
+              <h3><a href="#">Basketball 5v5 Mens League</a></h3>
+              <h4>5:00PM Tuesday, May 4</h4>
+              <h4><a href="#">@Court1</a></h4>
+              <h4><a href="#">MY TEAM</a> VS <a href="#">KILLERS</a></h4>
+            </div>
+            <!--home and away team user list-->
+            <div style="width:85%;max-width:900px;min-width:200px;" class="d-flex justify-content-around flex-wrap">
+              <div class="col-6 float-left flex" id="hometeam">
+                <h2>Home Team: Killers</h2>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Name</th>
+                      <th scope="col">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody id="table">
+                    <tr>
+                      <th scope="row"><a href="#">Jake Au</a></th>
+                      <td>Captain</td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><a href="#">Vincent Saverese</a></th>
+                      <td>Member</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="border p-2 d-flex justify-content-center">
+                  <div>
+                    <h6 id="record">record 7|0|0</h6>
+                    <h6 id="pastGames">Past games: null</h6>
+                    <h6 id="totalPlayers">Total Players: 10</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 float-right" id="awayteam">
+                <h2>Home Team: Angels</h2>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Name</th>
+                      <th scope="col">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody id="table">
+                    <tr>
+                      <th scope="row"><a href="#">Jake Au</a></th>
+                      <td>Captain</td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><a href="#">Vincent Saverese</a></th>
+                      <td>Member</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="border p-2 d-flex justify-content-center">
+                  <div>
+                    <h6>record 7|0|0</h6>
+                    <h6>Past games: null</h6>
+                    <h6>Total Players: 10</h6>
+                  </div>
+                </div>
+              </div>
 
-          <main class="container-fluid">
-            Game info for:
-            <span id="gameinfo">
-
+            </div>
             </span>
           </main>
           <br><br> <!-- delete brs later -->
