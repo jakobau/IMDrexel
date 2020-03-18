@@ -2,9 +2,12 @@ const express = require("express");
 const server = express();
 const mysql = require("mysql");
 
-const dashboard = require("./dashboard")(server);
+const bodyParser = require('body-parser');
+server.use(bodyParser.urlencoded({extended : true}));
+server.use(bodyParser.json());
 
-server.listen(8080, function() { console.log("Server open on 8080...") });
+const dashboard = require("./dashboard")(server);
+const auth = require("./authenticate")(server);
 
 //const connection = mysql.createConnection({
 //  host     : process.env.RDS_HOSTNAME,
@@ -25,3 +28,6 @@ server.listen(8080, function() { console.log("Server open on 8080...") });
 //connection.end();
 
 server.use(express.static("../public"));
+
+
+server.listen(8080, function() { console.log("Server open on 8080...") });

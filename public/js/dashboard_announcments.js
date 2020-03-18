@@ -1,4 +1,4 @@
-var announcments = document.getElementById('announcments');
+var announcements = document.getElementById('announcements');
 /*
 window.addEventListener("load", function() {
   var xhr = new XMLHttpRequest();
