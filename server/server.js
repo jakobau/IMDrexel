@@ -31,17 +31,27 @@ con.connect(function(err) {
 con.query('USE imdrexldb;');
 
 // begin making queries and requesting information from the server
-con.query('SELECT * FROM schedule_;', function(err, rows, field){
-  if (err) {
-    console.log(err);
-    return;
-  }
-  console.log(rows[1]);
-});
+
+var result = [];
+//
+//  anything surrounded by quotes and pluses is to be replaced with user information once implemented
+//
+var schedule = function(callback) {
+
+  con.query('SELECT * FROM schedule_ WHERE schedule_.homeID = '+'1'+' OR schedule_.awayID = '+'1'+';', function(err, rows, field){
+    if (err) {
+      console.log(err);
+      return;
+    }
+    result.push(rows[0]);
+    callback(null, result);
+  });
+
+}
+
+schedule(function(err, result){ console.log(result); });
 
 con.end();
 
 server.use(express.static("../public"));
-
-
 server.listen(8080, function() { console.log("Server open on 8080...") });
