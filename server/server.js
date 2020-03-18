@@ -36,7 +36,7 @@ var result = [];
 //
 //  anything surrounded by quotes and pluses is to be replaced with user information once implemented
 //
-var schedule = function(callback) {
+function schedule (callback) {
 
   con.query('SELECT * FROM schedule_ WHERE schedule_.homeID = '+'1'+' OR schedule_.awayID = '+'1'+';', function(err, rows, field){
     if (err) {
@@ -44,12 +44,11 @@ var schedule = function(callback) {
       return;
     }
     result.push(rows[0]);
-    callback(null, result);
+    callback(result);
   });
 
 }
 
-schedule(function(err, result){ console.log(result); });
 
 con.end();
 
