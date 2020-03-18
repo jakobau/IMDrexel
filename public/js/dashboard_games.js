@@ -153,11 +153,11 @@ function gamechange(xml, num) {
   div.append(content1);
 
   var content2 = document.createElement("h4");
-  content2.innerHTML += "<a href=\"map.html\">" + obj.Location + "</a>";
+  content2.innerHTML += "<a href=\"#\">" + obj.Location + "</a>";
   div.append(content2);
 
   var content3 = document.createElement("h4");
-  content3.innerHTML += "<a href=\"viewteam.html?teamid=1&page=dashboard\">MY TEAM</a>" + " VS " + "<a href=\"viewteam.html?teamid=1&page=dashboard\">" + obj.Opponent + "</a>";
+  content3.innerHTML += "<a href=\"#\">MY TEAM</a>" + " VS " + "<a href=\"#\">" + obj.Opponent + "</a>";
   div.append(content3);
 
   var content4 = document.createElement("h5");
@@ -165,7 +165,7 @@ function gamechange(xml, num) {
   div.append(content4);
 
   var content5 = document.createElement("p");
-  content5.innerHTML ="<a href=\"/gameinfo.html?gameid=09485\">more info</a>";
+  content5.innerHTML ="<a href=\"/gameinfo.html?myVar=09485\">more info</a>";
   div.append(content5);
 
   //reset div and update
