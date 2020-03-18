@@ -1,12 +1,22 @@
 module.exports = function(server) {
 
   //when user logs in
-  server.post('/auth', function(request, response) {
-    var email = request.body.inputEmail;
-    var password = request.body.inputPassword;
+  server.post('/auth', (req, res) => {
+    var email = req.body.inputEmail;
+    var password = req.body.inputPassword;
+    var goodCombo = true;
 
     //check if user and pass are valid here (using SQL)
+    if (goodCombo) {
+      req.session.user = email;
+      res.redirect("/index.html");
+      console.log(req.session.user);
 
-    response.redirect('/index.html');
+    }
+    else {
+      req.session.msg = "Invalid Login";
+      res.redirect("./login.html");
+      console.log(req.session.msg);
+    }
   });
 };
