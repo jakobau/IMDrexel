@@ -6,6 +6,14 @@ const bodyParser = require('body-parser');
 server.use(bodyParser.urlencoded({extended : true}));
 server.use(bodyParser.json());
 
+const session = require("client-sessions");
+server.use(session({
+  cookieName: "session", 
+  secret: "asdf1234asdf1234",
+  duration: 30 * 60 * 1000, //duration is 30 mins
+  activeDuration: 5 * 60 * 1000 //if duration ends but still active, extend by 5 mins
+}));
+
 const dashboard = require("./dashboard")(server);
 const auth = require("./authenticate")(server);
 const jointeam = require("./jointeam")(server);
