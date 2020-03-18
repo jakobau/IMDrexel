@@ -19,9 +19,15 @@ if(urlParams.has('teamid')) {
   }
 
   if(page == "dashboard") {
-    console.log("dashboard");
     pagefrom.style.display = "none";
     pagefrom2.innerHTML="<a href=\"#\" style=\"color:white;\">Team " + teamid.toString() + "</a>";
+  }
+
+  if(page == "gameinfo") {
+    var gameid = urlParams.get('gameid');
+    pagefrom.innerHTML = "<a href=\"gameinfo.html?gameid="+gameid.toString()+"\" style=\"color:white;\">Game ID: " + gameid.toString() + "</a>";
+    pagefrom2.style.display = "block";
+    pagefrom2.innerHTML = "Team " + teamid.toString();
   }
 
   teamname.innerHTML = teamid + " 5v5 Basketball"; // !add team name and league
