@@ -31,12 +31,12 @@ con.connect(function(err) {
 con.query('USE imdrexldb;');
 
 // begin making queries and requesting information from the server
-con.query('SELECT * FROM roster;', function(err, rows, field){
+con.query('SELECT * FROM schedule_;', function(err, rows, field){
   if (err) {
     console.log(err);
     return;
   }
-  console.log(rows[0].players);
+  console.log(rows[1]);
 });
 
 con.end();
