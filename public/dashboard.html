@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!-- public/index.html -->
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>IMDrexel</title>
+
+    <link rel="stylesheet" href="css/menu.css">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  </head>
+  <body>
+
+    <!-- menu -->
+    <nav class="navbar navbar-light bg-primary justify-content-between border-bottom">
+      <a class="navbar-brand" href="dashboard.html">IMDrexel</a>
+      <a class="navbar-brand" href="profile.html">@Username <img src="./icons/avatar.jpg" width="50" height="30" alt=""></a>
+    </nav>
+
+    <!-- main content -->
+    <div class="container-fluid p-0">
+      <div class="row">
+        <!-- sidebar -->
+        <div class="col-fixed pr-0">
+            <div class="navbar navbar-light bg-white border-right sticky-top p-0" >
+              <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <div class="navbarOne p-2">
+                  <a class="nav-link text-secondary active" href="#" role="tab" aria-selected="true">Dashboard</a>
+                  <a class="nav-link text-secondary" href="profile.html" role="tab" aria-selected="false">Profile</a>
+                  <a class="nav-link text-secondary" href="myteams.html" role="tab" aria-selected="false">My Teams</a>
+                  <a class="nav-link text-secondary" href="jointeam.html" role="tab" aria-selected="false">Join Team</a>
+                  <a class="nav-link text-secondary" href="new.html" role="tab" aria-selected="false">New to IMDrexel?</a>
+                  <a class="nav-link text-secondary" href="rules.html" role="tab" aria-selected="false">Rules and Regulations</a>
+                  <a class="nav-link text-secondary" href="leagues.html" role="tab" aria-selected="false">Upcoming Sports</a>
+                  <a class="nav-link text-secondary" href="contact.html" role="tab" aria-selected="false">Contact Organizers</a>
+                </div>
+                <div class="navbarTwo" style="display:none;">
+                  <a class="nav-link text-secondary active" href="#" role="tab" aria-selected="true"><img src="./icons/dash.png" width="20" height="auto"></a>
+                  <a class="nav-link text-secondary" href="profile.html" role="tab" aria-selected="false"><img src="./icons/profile.jpg" width="20" height="auto"></a>
+                  <a class="nav-link text-secondary" href="myteams.html" role="tab" aria-selected="false"><img src="./icons/team.png" width="20" height="auto"></a>
+                  <a class="nav-link text-secondary" href="jointeam.html" role="tab" aria-selected="false"><img src="./icons/jointeam.png" width="20" height="auto"></a>
+                  <a class="nav-link text-secondary" href="new.html" role="tab" aria-selected="false"><img src="./icons/new.png" width="20" height="auto"></a>
+                  <a class="nav-link text-secondary" href="rules.html" role="tab" aria-selected="false"><img src="./icons/rules.png" width="20" height="auto"></a>
+                  <a class="nav-link text-secondary" href="leagues.html" role="tab" aria-selected="false"><img src="./icons/league.png" width="20" height="auto"></a>
+                  <a class="nav-link text-secondary" href="contact.html" role="tab" aria-selected="false"><img src="./icons/contact.png" width="20" height="auto"></a>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <!-- under nav bar, sticky sub nav-->
+        <div class="col pl-0">
+          <!-- under nav bar, sticky sub nav-->
+          <nav aria-label="breadcrumb" class="sticky-top">
+            <ol class="breadcrumb" style="border-radius: 0;">
+              <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+            </ol>
+          </nav>
+          <!-- start main content -->
+          <main class="d-flex justify-content-around flex-wrap">
+            <div>
+              <h2>My Game Schedule</h2>
+              <div class="d-flex justify-content-around" id="upcomingGames">
+                <p>past games</p>
+                <p>upcoming games</p>
+              </div>
+              <div class="d-flex justify-content-center">
+                <div class="upcomingGames" id="upcomingGames">
+                  <a class="dot" id="game1"></a>
+                  <span class="line"></span>
+                  <span class="dot" id="game2"></span>
+                  <span class="line"></span>
+                  <span class="dotMain" id="game3">
+                    NEXT GAME
+                    <h4><strong>May 4</strong></h4>
+                    <h5><em>basketball</em></h5>
+                  </span>
+                  <span class="line2"></span>
+                  <span class="dot" id="game4"></span>
+                  <span class="line"></span>
+                  <span class="dot" id="game5"></span>
+                </div>
+              </div>
+              <div class="d-flex flex-row justify-content-center" id="upcomingGames2">
+                  <div class="p-3" id="shortgame2"><a href="#">Last</a></div>
+                  <div class="p-3" id="shortgame3"><a href="#">Next</a></div>
+                  <div class="p-3" id="shortgame4"><a href="#">Upcoming</a></div>
+              </div>
+              <div class="d-flex justify-content-center">
+                <div id="gameInfo" class="box1">
+                  <h3><a href="#">Basketball 5v5 Mens League</a></h3>
+                  <h4>5:00PM Tuesday, May 4</h4>
+                  <h4><a href="map.html">@Court1</a></h4>
+                  <h4><a href="#">MY TEAM</a> VS <a href="#">KILLERS</a></h4>
+                  <h5>record 7|0|0</h5>
+                  <p><a href="/gameinfo.html?gameinfo=09485">more info</a></p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h2>Upcoming Events</h2>
+              <div id="events" class="box2">
+                <h5><a href="#">Drexel Basketball Mens @ 7PM Sun 2/20</a></h5><hr>
+                <h5><a href="#">Drexel Basketball Womens @ 2PM Sat 3/13</a></h5><hr>
+                <h5><a href="#">Drexel Basketball Womens @ 2PM Sat 3/13</a></h5><hr>
+                <h5><a href="#">Squash Tourney @3/13 - 3/30</a></h5><hr>
+                <h5><a href="#">Drexel Volleyball Womens @ 8PM 3/15</a></h5><hr>
+                <p style="text-align:center; margin:0;"><a href="#">more...</a></p>
+              </div>
+            </div>
+            <div>
+              <h2>My Stats</h2>
+              <div id="playerStats" class="box1">
+                <table>
+                  <th><h4>Current Teams</h4><hr></th>
+                  <tr>
+                    <th><h5><a href="#">Basketball 5v5 Mens League: </a></h5></th>
+                    <th><h5>Record 8|2|1</h5></th>
+                  </tr>
+                  <tr>
+                    <td><h5><a href="#">Soccer 3v3 CoRec League: </a></h5></td>
+                    <td><h5>Record 2|4|0</h5></td>
+                  </tr>
+                  <th><h4>Past Teams</h4><hr></th>
+                  <tr>
+                    <th><h5><a href="#">Winter 2019 Volleyball 6v6 CoRec League: </a></h5></th>
+                    <th><h5>Record 8|2|1</h5></th>
+                  </tr>
+                  <tr>
+                    <td><h5><a href="#">Spring 2019 Beach Volleyball 4v4 Mens League: </a></h5></td>
+                    <td><h5>Record 10|0|0</h5></td>
+                  </tr>
+                  <tr>
+                    <td><h5><a href="#">Fall 2019 Volleyball 6v6 CoRec League: </a></h5></td>
+                    <td><h5>Record 8|2|1</h5></td>
+                  </tr>
+                  <tr><td><p><a href="#">more...</a></p></td><tr>
+                </table>
+              </div>
+            </div>
+            <div style="padding:20px;">
+              <h2>Announcements</h2>
+              <div id="announcements" class="box2">
+                <a href="#"><h5>Welcome!</h5><h6>Welcome to IMDrexel, the new intramural website for college. Make sure to...</h6></a><hr>
+                <a href="#"><h5>Sign up</h5><h6>Make sure to sign up for the upcoming squash, gaming leage, and come to the...</h6></a><hr>
+                <a href="#"><h5>New Sports</h5><h6>If you are interested in more sports make sure to check out the league page...</h6></a><hr>
+                <a href="#"><h5>Contact Us</h5><h6>If you have questions, concerns, or a review of the website contact us through...</h6></a><hr>
+                <a href="#"><p style="text-align:center; margin:0;">more...</p></a>
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+    </div>
+
+    <!--footer-->
+    <footer class="footer-copyright text-center py-3 border-top">Summit Squad © 2020 Copyright:
+      <a href="https://github.com/jakobau/IMDrexel"> Github Link</a>
+    </footer>
+
+  </body>
+  <script src="js/dashboard_games.js"></script>
+  <script src="js/dashboard_events.js"></script>
+  <script src="js/dashboard_playerStats.js"></script>
+  <script src="js/dashboard_announcements.js"></script>
+</html>
