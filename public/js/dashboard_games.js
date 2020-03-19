@@ -144,19 +144,19 @@ shortgame3.addEventListener("click", function() {
 //change on event function
 function gamechange(xml, num) {
   //game number and xml response in JSON
-  var gameNum = num;
+  var gameNum = "game" + num.toString();
   var obj = JSON.parse(xml.response);
 
   //building div for gameInfo
   var div = document.createElement("div");
 
   var title = document.createElement("h3");
-  title.innerHTML = num.toString() + "<a href=\"#\">" + obj.sport + " " + obj.league + "</a>";
+  title.innerHTML = "<a href=\"#\">" + obj.sport + " " + obj.league + "</a>";
   div.append(title);
   div.append(document.createElement("hr"));
 
   var content1 = document.createElement("h4");
-  content1.innerHTML += obj.Date + ", " + obj.Day + " " + obj.Time;
+  content1.innerHTML += obj.Date + ", " + obj.Time;
   div.append(content1);
 
   var content2 = document.createElement("h4");
@@ -178,6 +178,10 @@ function gamechange(xml, num) {
   //reset div and update
   gameInfo.innerHTML = "";
   gameInfo.append(div);
+
+  if(num == 3) {
+    game3.innerHTML = "NEXT GAME<h4><strong>"+obj.Date+"</strong></h4><h5><em>"+obj.sport+"</em></h5>";
+  }
 }
 
 //reset background color

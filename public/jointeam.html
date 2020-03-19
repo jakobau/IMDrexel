@@ -24,7 +24,7 @@
 
     <!-- menu -->
     <nav class="navbar navbar-light bg-primary justify-content-between border-bottom" style="background-color: #f2be54 !important;">
-      <a class="navbar-brand" href="index.html">IMDrexel</a>
+      <a class="navbar-brand" href="dashboard.html">IMDrexel</a>
       <a class="navbar-brand" href="profile.html">@Username <img src="./icons/avatar.jpg" width="50" height="30" alt=""></a>
     </nav>
 
@@ -35,8 +35,8 @@
         <div class="col-fixed pr-0">
             <div class="navbar navbar-light bg-white border-right sticky-top p-0" >
               <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                <div class="navbarOne">
-                  <a class="nav-link text-secondary" href="index.html" role="tab" aria-selected="false">Dashboard</a>
+                <div class="navbarOne p-2">
+                  <a class="nav-link text-secondary" href="dashboard.html" role="tab" aria-selected="false">Dashboard</a>
                   <a class="nav-link text-secondary" href="profile.html" role="tab" aria-selected="false">Profile</a>
                   <a class="nav-link text-secondary" href="myteams.html" role="tab" aria-selected="false">My Teams</a>
                   <a class="nav-link text-secondary active" href="#" role="tab" aria-selected="true">Join Team</a>
@@ -46,7 +46,7 @@
                   <a class="nav-link text-secondary" href="contact.html" role="tab" aria-selected="false">Contact Organizers</a>
                 </div>
                 <div class="navbarTwo" style="display:none;">
-                  <a class="nav-link text-secondary" href="index.html" role="tab" aria-selected="false"><img src="./icons/dash.png" width="20" height="auto"></a>
+                  <a class="nav-link text-secondary" href="dashboard.html" role="tab" aria-selected="false"><img src="./icons/dash.png" width="20" height="auto"></a>
                   <a class="nav-link text-secondary" href="profile.html" role="tab" aria-selected="false"><img src="./icons/profile.jpg" width="20" height="auto"></a>
                   <a class="nav-link text-secondary" href="myteams.html" role="tab" aria-selected="false"><img src="./icons/team.png" width="20" height="auto"></a>
                   <a class="nav-link text-secondary active" href="#" role="tab" aria-selected="true"><img src="./icons/jointeam.png" width="20" height="auto"></a>
@@ -68,11 +68,8 @@
             </ol>
           </nav>
 
-          <!--alert
-          <div class="alert alert-success alert-dismissible" style="width:85%;">
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
-            <strong>Success!</strong> Indicates a successful or positive action.
-          </div>-->
+          <div id="alert">
+          </div>
 
           <main class="d-flex justify-content-around">
             <div id="accordion">
@@ -97,10 +94,7 @@
                           <h6><a data-toggle="collapse" href="#collapse1-1" aria-expanded="false">Opening the Door, 10 players</a></h6>
                           <div class="collapse" id="collapse1-1" data-parent="#collapse1">
                             <div class="float-left position-relative">
-                              <form action="jointeam" method=POST>
-                                <input name="teamid" value="1" style="display:none;">
-                                <input type="submit" class="btn btn-secondary mb-1 pull-left" value="Join Team">
-                              </form>
+                              <input type="submit" class="btn btn-secondary mb-1" id="button1" value="Join Team">
                             </div>
                             <a class="btn btn-info mb-1" href="viewteam.html?teamid=1&page=league">View Team</a>
                           </div>
@@ -108,9 +102,9 @@
                           <h6><a data-toggle="collapse" href="#collapse1-2" aria-expanded="false">Draco FC, 8 players</a></h6>
                           <div class="collapse" id="collapse1-2" data-parent="#collapse1">
                             <div class="float-left position-relative">
-                              <form action="jointeam" method=POST>
+                              <form>
                                 <input name="teamid" value="2" style="display:none;">
-                                <input type="submit" class="btn btn-secondary mb-2" value="Join Team">
+                                <input type="submit" class="btn btn-secondary mb-2" onclick="alert()" value="Join Team">
                               </form>
                             </div>
                             <a class="btn btn-info mb-1" href="viewteam.html?teamid=2&page=league">View Team</a>
