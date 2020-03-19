@@ -5,9 +5,9 @@ module.exports = function(server) {
     var email = req.body.email;
     var password = req.body.password;
     var goodCombo = true;
+    
     //check if user and pass are valid here (using SQL)
     if (goodCombo) {
-      console.log(email);
       req.session.user = email;
       res.redirect("/dashboard.html");
       console.log(req.session.user);

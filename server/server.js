@@ -18,6 +18,18 @@ const dashboard = require("./dashboard")(server);
 const auth = require("./authenticate")(server);
 const jointeam = require("./jointeam")(server);
 
+//Checks if user is logged in each time they navigate to a new page
+server.get("/check", (req, res) => {
+  if (req.session.user == undefined) {
+    console.log("BEFORE");
+    res.redirect("/");
+    console.log("AFTER");
+  }
+  else {
+    console.log(req.session.user);
+  }
+});
+
 // Vincent Savarese AWS educate database credentials
 let con = mysql.createConnection({
   // user and password fields are the master username and master password for the imdrexel instance
@@ -102,3 +114,4 @@ server.get('/dashboardgames', (req, res) => {
 
 server.use(express.static("../public"));
 server.listen(8080, function() { console.log("Server open on 8080...") });
+
