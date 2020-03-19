@@ -2,7 +2,7 @@ module.exports = function(server) {
 
   //when user logs in
   server.post('/auth', (req, res) => {
-    var email = "mwd46@drexel.edu" //TODO:FIXTHIS:req.body.inputEmail;
+    var email = undefined //TODO:FIXTHIS:req.body.inputEmail;
     var password = req.body.inputPassword;
     var goodCombo = true;
     
