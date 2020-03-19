@@ -51,5 +51,11 @@ con.end();
 
 server.use(express.static("../public"));
 
-
 server.listen(8080, function() { console.log("Server open on 8080...") });
+
+//Checks if user is logged in each time they navigate to a new page
+server.get("/", (req, res) => {
+  if (req.session.user == undefined) {
+    res.redirect("/index.html");
+  }
+});
