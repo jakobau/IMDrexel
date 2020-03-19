@@ -37,23 +37,60 @@ var result = [];
 //  anything surrounded by quotes and pluses is to be replaced with user information once implemented
 //
 
-var schedule = 'SELECT * FROM schedule_ WHERE schedule_.homeID = '+'1'+' OR schedule_.awayID = '+'1'+';';
+server.get('/dashboardgames', (req, res) => {
 
-con.query(schedule, function(err, rows, field){
-  if (err) {
-    console.log(err);
-    return;
-  }
+  var info = req.url.toString().split(/[?|=|&]/); //splits up request
+  gameNum = info[2]; //gets just the game number (5 is three games future, 4 is two games, etc.)
+  var obj = {};
 
-  server.get('/sqlrequest', (req, res) => {
-    res.send(rows)
+  var schedule = 'SELECT * FROM schedule_ WHERE schedule_.homeID = '+'1'+' OR schedule_.awayID = '+'1'+';';
+  con.query(schedule, function(err, rows, field){
+    if (err) {
+      console.log(err);
+      return;
+    }
+
+    obj["Location"] = rows[gameNum].location;
+    obj["Date"] = rows[gameNum].date_.toString().substring(0, 10);
+    obj["Time"] = rows[gameNum].date_.toString().substring(16, 24);
+
+    teamID = rows[gameNum].awayID;
+    var state = 'SELECT * FROM teams WHERE teamID = '+teamID+';';
+    con.query(state, function(err, rows, field){
+
+      obj["Opponent"] = rows[0].teamName;
+
+      var teamStats = 'SELECT * FROM teamStats WHERE teamID = '+teamID+';'
+      con.query(teamStats, function(err, rows, field){
+        if (err) {
+          console.log(err);
+          return;
+        }
+
+        obj["OpponentWins"] = rows[0].wins;
+        obj["OpponentDraws"] = rows[0].losses;
+        obj["OpponentLosses"] = rows[0].draws;
+
+        var leagues = 'SELECT * FROM leagues, teams WHERE teams.leagueID = leagues.leagueID AND teams.teamID = 1;'
+        con.query(leagues, function(err, rows, field){
+          if (err) {
+            console.log(err);
+            return;
+          }
+
+          obj["sport"] = rows[0].league.substring(0, 6);
+          obj["league"] = rows[0].league.substring(7, 10) + " " + rows[0].gender;
+
+          res.send(obj);
+        });
+
+      });
+
+    });
+
   });
-  
+
 });
-
-
-
-con.end();
 
 server.use(express.static("../public"));
 server.listen(8080, function() { console.log("Server open on 8080...") });
