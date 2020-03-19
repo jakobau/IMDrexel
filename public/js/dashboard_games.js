@@ -15,6 +15,13 @@ var shortgame3 = document.getElementById('shortgame4');
 //default next game in gameInfo html
 window.addEventListener("load", function() {
   var xhr = new XMLHttpRequest();
+  xhr.open('GET', '/check', true);
+  xhr.send();
+});
+
+//default next game in gameInfo html
+window.addEventListener("load", function() {
+  var xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       resetColor();
