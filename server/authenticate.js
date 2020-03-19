@@ -2,9 +2,10 @@ module.exports = function(server) {
 
   //when user logs in
   server.post('/auth', (req, res) => {
-    var email = "mwd46@drexel.edu";//TODO:MAKE THIS WORK: req.body.inputEmail;
+    var email = req.body.inputEmail;
     var password = req.body.inputPassword;
     var goodCombo = true;
+    
     //check if user and pass are valid here (using SQL)
     if (goodCombo) {
       req.session.user = email;
